@@ -10,30 +10,31 @@ contract HotelRegistry
     uint256 public balance;
     //registration fee 
     uint256 registrationFee;
-    address owner; 
+    address public _owner; 
     struct hotelMetaData{
         string name;
         string place;
         uint256 roomCount;
         uint256 rate;
+        uint256 roomsAvailable;
     }
     //mapping to show which addresses are registered as HOTEL OWNERS 
     mapping(address=>bool) registeredHotels;
-    mapping(address=> hotelMetaData) public hotelData;
+    mapping(address=> hotelMetaData)  hotelData;
     event HotelRegistrationDone(address hotelAddress, uint256 value);
     event feesUpdated(uint256 _fees);
 
     //onlyOwner modifier 
-    modifier onlyOwner()
+    modifier _onlyOwner()
     {
-        require(msg.sender == owner);
+        require(msg.sender == _owner);
         _;
     }
 
     //constructor 
     constructor()
     {
-        owner = msg.sender;
+        _owner = msg.sender;
         registrationFee = 1 ether;
     }
 
@@ -48,7 +49,7 @@ contract HotelRegistry
     }
 
     //to set Registartion Fees 
-    function setFees(uint256 _fees) public onlyOwner() {
+    function setFees(uint256 _fees) public _onlyOwner() {
         require(_fees > 0 ether);
         registrationFee = _fees.mul(1 ether);
         emit feesUpdated(_fees);
@@ -59,7 +60,7 @@ contract HotelRegistry
         return(registrationFee);
     }
 
-    function addHotelDetails(string memory _hotelName, string memory  _place, uint256  _roomcount, uint256 _costPerRoom) public{
+    function addHotelDetails(string memory _hotelName, string memory  _place, uint256  _roomcount, uint256 _costPerRoom, uint256 _roomsAvailable) public{
         require(registeredHotels[msg.sender] == true, "Please first you need to register your Hotel!");
 
         //now set hotel meta data
@@ -67,11 +68,13 @@ contract HotelRegistry
         hotelData[msg.sender].place = _place;
         hotelData[msg.sender].roomCount = _roomcount;
         hotelData[msg.sender].rate = _costPerRoom;
+        hotelData[msg.sender].roomsAvailable = _roomsAvailable;
     }
     function withdrawRegistration() public {
         require(registeredHotels[msg.sender] == true, "Please first you need to register your Hotel!");
         address payable ownerAddress = payable(msg.sender);
         registeredHotels[msg.sender] = false;
+        delete hotelData[msg.sender];
         ownerAddress.transfer(registrationFee.mul(50).div(100));
         balance = balance - registrationFee.mul(50).div(100);
         
