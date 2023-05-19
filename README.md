@@ -8,6 +8,9 @@ There will be 4 Smart Contract In total:
   - Registered Owners can also withdraw thier registartion, but it will cost 50% of the fees as penalty. 
   - users can check the fees as well as all hotel data available. it is public.
 
-2. NFT CONTRACT TO Mint Token 
-3. Contract where end users will interact with.
-4. Contract to do credentials verification. 
+2. NFT CONTRACT TO Mint Token ✅
+  - This contract has bookHotelRoom Function where the end user will enter details while booking. 
+  - This will be a payable function and in return will get the NFT which will act as a proof for his/her booking.
+  - Users can also call the getDetails functions to see the nft details. 
+4. Contract where end users will interact with.
+5. Contract to do credentials verification. 
