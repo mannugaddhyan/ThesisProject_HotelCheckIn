@@ -1,0 +1,274 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b5c3c2;
+    margin: 0;
+    padding: 0;
+  }
+
+
+#connectButton{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #e60847;
+    color: rgb(251, 251, 251);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#checkFee{
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    padding: 10px 20px;
+    background-color: #740bec;
+    color: rgb(230, 237, 237);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#text1{
+    position: relative;
+    top: 65px;
+    left: 50px;
+}
+#nameInput{
+    position: relative;
+    top: 100px;
+    left: 30px;
+}
+
+#register{
+    position: absolute;
+    top: 180px;
+    left: 50px;
+    padding: 10px 20px;
+    background-color: #740bec;
+    color: rgb(230, 237, 237);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#setfees{
+    position: absolute;
+    top: 225px;
+    left: 310px;
+    padding: 10px 20px;
+    background-color: #740bec;
+    color: rgb(230, 237, 237);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#withdrawRegistration
+{
+    position: absolute;
+    top: 280px;
+    left: 50px;
+    padding: 10px 20px;
+    background-color: #740bec;
+    color: rgb(230, 237, 237);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#addHotelForm
+{
+    position: relative;
+    top: 200px;
+    left: 50px;
+}
+
+/* Style for the form container */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex; /* Use flexbox for flexible layout */
+    justify-content: space-around; /* Distribute space evenly between forms */
+
+  }
+  
+  /* Style for the form header */
+  .form-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the form labels */
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the form inputs */
+  input[type="text"],
+  input[type="number"] {
+    width: 20%;
+    padding: 8px;
+    border: 1px solid rgb(110, 211, 15);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the form submit button */
+  input[type="submit"] {
+    background-color: #0c2eef;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Style for the form submit button on hover */
+  input[type="submit"]:hover {
+    background-color: #0c14ed;
+  }
+  
+  /* Style for form error messages */
+  .error-message {
+    color: red;
+    margin-top: 5px;
+  }
+  
+  /* Style for form success message */
+  .success-message {
+    color: rgb(8, 165, 238);
+    margin-top: 5px;
+  }
+
+
+#viewlist
+{
+    position: absolute;
+    top: 950px;
+    left: 50px;
+    padding: 10px 20px;
+    background-color: #740bec;
+    color: rgb(230, 237, 237);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#hotelList
+{
+    position: absolute;
+    top: 980px;
+    left: 50px;
+}
+
+#t2{
+    position: relative;
+    top: 290px;
+    left: 50px;
+}
+
+#getHotelDetails{
+    position: absolute;
+    top: 1015px;
+    left: 320px;
+    padding: 10px 20px;
+    background-color: #0baeee;
+    color: rgb(230, 237, 237);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#result
+{
+  position: relative;
+  top: 290px;
+    left: 50px;
+}
+
+#r1{
+  position: relative;
+    top: 290px;
+    left: 50px;
+}
+
+#bookHotelForm
+{
+    position: relative;
+    top: 350px;
+    left: 50px;
+}
+
+#tokenInput{
+  position: relative;
+  top: 381px;
+  left: 50px;
+}
+#tokenDetails
+{
+  position: absolute;
+  top: 1650px;
+  left: 320px;
+  padding: 10px 20px;
+  background-color: #ea670a;
+  color: rgb(230, 237, 237);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#result2
+{
+  position: relative;
+  top: 400px;
+    left: 50px;
+}
+
+#r2{
+  position: relative;
+    top: 400px;
+    left: 50px;
+}
+
+#inp4{
+  position: relative;
+  top: 430px;
+  left: 50px;
+}
+#tokensNumber
+{
+  position: absolute;
+  top: 1820px;
+  left: 320px;
+  padding: 10px 20px;
+  background-color: #ea670a;
+  color: rgb(230, 237, 237);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#tokenList
+{
+    position: absolute;
+    top: 1900px;
+    left: 50px;
+}
+
+
+#checkIn
+{
+    position: relative;
+    top: 450px;
+    left: 50px;
+}
+
+#checkOut
+{
+  position: relative;
+    top: 470px;
+    left: 50px;
+}
+
